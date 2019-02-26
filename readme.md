@@ -1,6 +1,8 @@
 |Title|Submissions|Difficulty|Note|
 |------|------|------|------|
 [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/FibonacciNumber.java)|Easy|array|
+[532. K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/FindPairs.java)|Easy|array|
+[665. Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/CheckPossibility.java)|Easy|array|
 [697. Degree of an Array](https://leetcode.com/problems/degree-of-an-array/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/FindShortestSubArray.java)|Easy|array|
 [717. 1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/IsOneBitCharacter.java)|Easy|array|
 [830. Positions of Large Groups](https://leetcode.com/problems/positions-of-large-groups/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/LargeGroupPositions.java)|Easy|array|
