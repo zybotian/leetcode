@@ -18,7 +18,7 @@ public class PartitionLabels {
     class Solution {
         public List<Integer> partitionLabels(String S) {
             char[] chars = S.toCharArray();
-            Map<Character, Pair> map = new TreeMap<>();
+            Map<Character, Pair> map = new HashMap<>();
             for (int i = 0; i < chars.length; i++) {
                 char charAt = chars[i];
                 Pair pair = map.get(charAt);
