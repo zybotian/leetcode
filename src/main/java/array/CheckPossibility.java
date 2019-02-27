@@ -39,9 +39,11 @@ public class CheckPossibility {
             while (j < nums.length) {
                 if (nums[i] > nums[j]) {
                     count++;
+                    // 最多只能有一个逆序的
                     if (count > 1) {
                         return false;
                     }
+                    // 参考data5,data6,data7,data8,data9
                     if (j < nums.length - 1 && i >= 1 && nums[i] > nums[j + 1] && nums[j] < nums[i - 1]) {
                         return false;
                     }
