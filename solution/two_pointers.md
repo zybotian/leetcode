@@ -2,6 +2,8 @@
 |------|------|------|------|
 [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/MinSubArrayLen.java)|Medium|two pointers, array|
 [524. Longest Word in Dictionary through Deleting](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/FindLongestWord.java)|Medium|two pointers, string, sort|
+[567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/CheckInclusion.java)|Medium|two pointers, string, hash table, sliding window|
 [763. Partition Labels](https://leetcode.com/problems/partition-labels/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/PartitionLabels.java)|Medium|two pointers, greedy|
+[881. Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/NumRescueBoats.java)|Medium|string, two pointers|
 [925. Long Pressed Name](https://leetcode.com/problems/long-pressed-name/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/IsLongPressedName.java)|Easy|string, two pointers|
 [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/IntervalIntersection.java)|Medium|array, two pointers|
