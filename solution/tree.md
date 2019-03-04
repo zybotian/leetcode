@@ -8,3 +8,4 @@
 [872. Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/LeafSimilar.java)|Easy|tree, recursive, none-recursive, stack|
 [897. Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IncreasingBST.java)|Easy|tree, recursive, none-recursive, stack|
 [965. Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IsUnivalTree.java)|Easy|tree, recursive|
+[993. Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IsCousins.java)|Easy|tree, level order, queue|
