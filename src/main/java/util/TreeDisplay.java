@@ -15,4 +15,17 @@ public class TreeDisplay {
         }
         System.out.println();
     }
+
+    public static void visitInOrder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        if (root.left != null) {
+            visitInOrder(root.left);
+        }
+        System.out.print(root.val + "\t");
+        if (root.right != null) {
+            visitInOrder(root.right);
+        }
+    }
 }
