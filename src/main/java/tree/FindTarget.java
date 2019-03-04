@@ -71,6 +71,51 @@ public class FindTarget {
         }
     }
 
+    // 42.25%, 将二叉树递归遍历改成非递归遍历, 效率并没有提高, 因为Stack是线程安全的栈,每次访问都要获取锁和释放锁
+    static class Solution4 {
+        public boolean findTarget(TreeNode root, int k) {
+            List<Integer> nodeValues = visitInOrder(root);
+            int[] integers = new int[nodeValues.size()];
+            int index = 0;
+            // 遍历linked list, for each方式底层依然会被优化成iterator的方式进行迭代
+            Iterator<Integer> iterator = nodeValues.iterator();
+            while (iterator.hasNext()) {
+                integers[index++] = iterator.next();
+            }
+            // 使用基本类型进行二分查找, 若使用对象类型,比较时需要调用compareTo方法,闲人效率比直接数字比较低
+            for (int i = 0; i < integers.length; i++) {
+                if (Arrays.binarySearch(integers, i + 1, integers.length, k - integers[i]) >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private List<Integer> visitInOrder(TreeNode root) {
+            if (root == null) {
+                return new LinkedList<>();
+            }
+
+            List<Integer> result = new LinkedList<>();
+
+            Stack<TreeNode> stack = new Stack<>();
+            TreeNode p = root;
+            while (p != null || !stack.isEmpty()) {
+                while (p != null) {
+                    stack.push(p);
+                    p = p.left;
+                }
+                if (!stack.isEmpty()) {
+                    p = stack.peek();
+                    result.add(p.val);
+                    stack.pop();
+                    p = p.right;
+                }
+            }
+            return result;
+        }
+    }
+
     // 55.26%
     static class Solution3 {
         public boolean findTarget(TreeNode root, int k) {
