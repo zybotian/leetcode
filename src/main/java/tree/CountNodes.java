@@ -27,6 +27,7 @@ public class CountNodes {
         System.out.println(solution.countNodes(node1));
     }
 
+    // 击败100%
     static class Solution {
         public int countNodes(TreeNode root) {
             if (root == null) {
