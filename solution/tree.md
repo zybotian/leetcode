@@ -5,3 +5,4 @@
 [669. Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/TrimBST.java)|Easy|tree, recursive|
 [872. Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/LeafSimilar.java)|Easy|tree, recursive, none-recursive, stack|
 [897. Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IncreasingBST.java)|Easy|tree, recursive, none-recursive, stack|
+[965. Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IsUnivalTree.java)|Easy|tree, recursive|
