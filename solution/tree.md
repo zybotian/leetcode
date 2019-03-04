@@ -1,6 +1,7 @@
 |Title|Submissions|Difficulty|Note|
 |------|------|------|------|
 [222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/CountNodes.java)|Medium|tree, recursive|
+[429. N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/NaryTreeLevelOrder.java)|Easy|tree, recursive, level order|
 [653. Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/FindTarget.java)|Easy|tree, recursive, none-recursive, stack, bin search|
 [669. Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/TrimBST.java)|Easy|tree, recursive|
 [872. Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/LeafSimilar.java)|Easy|tree, recursive, none-recursive, stack|
