@@ -1,12 +1,13 @@
 |Title|Submissions|Difficulty|Note|
 |------|------|------|------|
-[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/CountNodes.java)|Medium|tree, recursive|
-[429. N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/NaryTreeLevelOrder.java)|Easy|tree, recursive, level order|
-[538. Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/ConvertBST.java)|Easy|tree, recursive, pre order|
+[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/CountNodes.java)|Medium|tree, recursion|
+[429. N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/NaryTreeLevelOrder.java)|Easy|tree, recursion, level order|
+[538. Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/ConvertBST.java)|Easy|tree, recursion, pre order|
+[563. Binary Tree Tilt](https://leetcode.com/problems/binary-tree-tilt/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/FindTilt.java)|Easy|tree, recursion|
 [606. Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/Tree2str.java)|Easy|tree, string|
-[653. Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/FindTarget.java)|Easy|tree, recursive, none-recursive, stack, bin search|
-[669. Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/TrimBST.java)|Easy|tree, recursive|
-[872. Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/LeafSimilar.java)|Easy|tree, recursive, none-recursive, stack|
-[897. Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IncreasingBST.java)|Easy|tree, recursive, none-recursive, stack|
-[965. Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IsUnivalTree.java)|Easy|tree, recursive|
+[653. Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/FindTarget.java)|Easy|tree, recursion, none-recursion, stack, bin search|
+[669. Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/TrimBST.java)|Easy|tree, recursion|
+[872. Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/LeafSimilar.java)|Easy|tree, recursion, none-recursion, stack|
+[897. Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IncreasingBST.java)|Easy|tree, recursion, none-recursion, stack|
+[965. Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IsUnivalTree.java)|Easy|tree, recursion|
 [993. Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IsCousins.java)|Easy|tree, level order, queue|
