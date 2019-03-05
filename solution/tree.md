@@ -7,6 +7,7 @@
 [606. Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/Tree2str.java)|Easy|tree, string|
 [653. Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/FindTarget.java)|Easy|tree, recursion, none-recursion, stack, bin search|
 [669. Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/TrimBST.java)|Easy|tree, recursion|
+[701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/InsertIntoBST.java)|Easy|tree, recursion|
 [872. Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/LeafSimilar.java)|Easy|tree, recursion, none-recursion, stack|
 [897. Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IncreasingBST.java)|Easy|tree, recursion, none-recursion, stack|
 [965. Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/tree/IsUnivalTree.java)|Easy|tree, recursion|
