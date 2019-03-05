@@ -7,3 +7,5 @@
 - [bin search汇总](https://github.com/zybotian/leetcode/blob/master/solution/binary_search.md)
 
 - [tree汇总](https://github.com/zybotian/leetcode/blob/master/solution/tree.md)
+
+- [string汇总](https://github.com/zybotian/leetcode/blob/master/solution/string.md)
