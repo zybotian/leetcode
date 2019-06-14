@@ -7,3 +7,4 @@
 |17. 打印从1到最大的n位数|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/offer/Print1toNDigits.java)|
 |19. 正则表达式匹配|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/offer/ExpressionMatch.java)|
 |23. 判断链表是否有环|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/offer/LinkListCircle.java)|
+|26. 一棵树是否包含另一颗树|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/offer/Subtree.java)|
