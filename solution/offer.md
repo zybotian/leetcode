@@ -11,3 +11,4 @@
 |40. 最小的k个数|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/offer/LeastKNumbers.java)|
 |41. 数据流的中位数|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/offer/MedianInStream.java)|
 |42. 连续子数组的最大和|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/offer/MaxSumOfSubArray.java)|
+|45. 把数组排成最小的数|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/offer/SortArrayForMinNumber.java)|
