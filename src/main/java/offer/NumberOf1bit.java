@@ -42,13 +42,28 @@ public class NumberOf1bit {
         return count;
     }
 
+    // Integer.toBinaryString方法得到二进制字符串,遍历字符串,累计1的个数
+    public static int countOfBit1_4(int number) {
+        int count = 0;
+        String binaryString = Integer.toBinaryString(number);
+        for (int i = 0; i < binaryString.length(); i++) {
+            if (binaryString.charAt(i) == '1') {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
         for (int i = 0; i <= 128; i++) {
-            System.out.println(i + "=" + countOfBit1_1(i) + "," + countOfBit1_2(i) + "," + countOfBit1_3(i));
+            System.out.println(i + "=" + countOfBit1_1(i) + "," + countOfBit1_2(i) + "," + countOfBit1_3(i)
+                    + "," + countOfBit1_4(i));
         }
         System.out.println(countOfBit1_2(-128));
         System.out.println(countOfBit1_2(-127));
         System.out.println(countOfBit1_3(-128));
         System.out.println(countOfBit1_3(-127));
+        System.out.println(countOfBit1_4(-128));
+        System.out.println(countOfBit1_4(-127));
     }
 }
