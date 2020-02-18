@@ -15,3 +15,4 @@
 [976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/LargestPerimeter.java)|Easy|array|
 [989. Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/AddToArrayForm.java)|Easy|array|
 [999. Available Captures for Rook](https://leetcode.com/problems/available-captures-for-rook/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/NumRookCaptures.java)|Easy|array|
+[1313. Decompress Run-Length Encoded List](https://leetcode.com/problems/decompress-run-length-encoded-list/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/array/DecompressRLEList.java)|Easy|array|
