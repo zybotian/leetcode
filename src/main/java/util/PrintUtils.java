@@ -10,7 +10,7 @@ public class PrintUtils {
             long end = System.currentTimeMillis();
             System.out.println("method:[" + method + "] executed, time cost:[" + (end - start) + "], result:[" + result + "]");
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.out.println(ex);
         }
     }
 }
