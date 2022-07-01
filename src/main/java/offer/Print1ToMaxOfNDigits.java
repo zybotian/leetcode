@@ -12,6 +12,8 @@ import java.util.List;
  */
 public class Print1ToMaxOfNDigits {
 
+    static List<String> result = new ArrayList<>();
+
     public static int[] printNumbers(int n) {
         int max = (int) Math.pow(10, n);
         int[] result = new int[max - 1];
@@ -85,7 +87,10 @@ public class Print1ToMaxOfNDigits {
     private static void print1ToMaxOfNDigits(char[] digits, int n, int cur) {
         if (cur == n - 1) {
             // 当前处理到了最后一位,输出
-            print(digits);
+            String tmp = print(digits);
+            if (!"".equals(tmp)) {
+                result.add(tmp);
+            }
         } else {
             // 当前还没到最后一位
             for (int i = 0; i < 10; i++) {
@@ -95,12 +100,23 @@ public class Print1ToMaxOfNDigits {
         }
     }
 
-    private static void print(char[] digits) {
-        System.out.println(Integer.parseInt(new String(digits)));
+    private static String print(char[] digits) {
+        int index = 0;
+
+        while (index < digits.length && digits[index] == '0') {
+            index++;
+        }
+
+        if (index >= digits.length) {
+            return "";
+        }
+
+        return new String(digits, index, digits.length - index);
     }
 
     public static void main(String[] args) {
-        PrintUtils.print(printNumbers(3));
+        // 12345-> 12346
+        print1ToMaxOfNDigits(3);
+        result.stream().forEach(System.out::println);
     }
-
 }
