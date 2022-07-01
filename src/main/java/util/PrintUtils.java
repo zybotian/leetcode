@@ -1,6 +1,7 @@
 package util;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 public class PrintUtils {
     public static void print(Object obj, Method method, Object[] args) {
@@ -12,5 +13,9 @@ public class PrintUtils {
         } catch (Exception ex) {
             System.out.println(ex);
         }
+    }
+
+    public static void print(int[] data) {
+        Arrays.stream(data).forEach(System.out::println);
     }
 }
