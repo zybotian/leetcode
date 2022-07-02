@@ -16,4 +16,15 @@ public class ListNodeUtils {
         }
         System.out.println("");
     }
+
+    public static ListNode create(int[] data) {
+        ListNode dummy = new ListNode(0);
+        ListNode last = dummy;
+        for (int i = 0; i < data.length; i++) {
+            ListNode curr = new ListNode(data[i]);
+            last.next = curr;
+            last = curr;
+        }
+        return dummy.next;
+    }
 }

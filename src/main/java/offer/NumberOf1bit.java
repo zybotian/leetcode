@@ -13,7 +13,7 @@ public class NumberOf1bit {
             if ((number & 1) == 1) {
                 count++;
             }
-            number >>= 1;
+            number >>>= 1;
         }
         return count;
     }
@@ -55,7 +55,7 @@ public class NumberOf1bit {
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i <= 128; i++) {
+        for (int i = -128; i <= 127; i++) {
             System.out.println(i + "=" + countOfBit1_1(i) + "," + countOfBit1_2(i) + "," + countOfBit1_3(i)
                     + "," + countOfBit1_4(i));
         }
