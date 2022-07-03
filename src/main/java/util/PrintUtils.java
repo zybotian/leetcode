@@ -18,4 +18,8 @@ public class PrintUtils {
     public static void print(int[] data) {
         Arrays.stream(data).forEach(System.out::println);
     }
+
+    public static void printBeauty(int[] data) {
+        System.out.println(Arrays.toString(data));
+    }
 }

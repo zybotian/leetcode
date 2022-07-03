@@ -1,7 +1,7 @@
 |Title|Submissions|Difficulty|Note|
 |------|------|------|------|
 [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/MinSubArrayLen.java)|Medium|two pointers, array|
-[524. Longest Word in Dictionary through Deleting](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/FindLongestWord.java)|Medium|two pointers, string, sort|
+[524. Longest Word in Dictionary through Deleting](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/FindLongestWord.java)|Medium|two pointers, string, sort.QuickSort|
 [567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/CheckInclusion.java)|Medium|two pointers, string, hash table, sliding window|
 [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/NumSubarrayProductLessThanK.java)|Medium|two pointers, sliding window|
 [763. Partition Labels](https://leetcode.com/problems/partition-labels/)|[solution](https://github.com/zybotian/leetcode/blob/master/src/main/java/twopointers/PartitionLabels.java)|Medium|two pointers, greedy|

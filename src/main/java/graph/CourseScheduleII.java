@@ -34,7 +34,7 @@ public class CourseScheduleII {
         System.out.println(Arrays.toString(solution.findOrder(6, pre8)));
     }
 
-    // 72.38%, topology sort, BFS
+    // 72.38%, topology sort.sort, BFS
     static class Solution {
         public int[] findOrder(int numCourses, int[][] prerequisites) {
             // 入度数组
@@ -56,7 +56,7 @@ public class CourseScheduleII {
             }
 
             /**
-             * topology sort 拓扑排序:
+             * topology sort.sort 拓扑排序:
              * 在有向图中选一个没有前驱的顶点并且输出
              * 从图中删除该顶点和所有以它为尾的弧, 即删除所有与它有关的边
              * 重复上述两步, 直至全部顶点均已输出; 或者当图中不存在无前驱的顶点为止
