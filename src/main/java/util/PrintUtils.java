@@ -32,4 +32,8 @@ public class PrintUtils {
         }
         System.out.println();
     }
+
+    public static void printBeauty(String[] st) {
+        System.out.println(Arrays.toString(st));
+    }
 }
