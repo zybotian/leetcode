@@ -1,6 +1,7 @@
 package util;
 
-import model.Node;
+
+import model.v2.Node;
 
 public class NodeUtils {
 

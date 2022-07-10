@@ -1,6 +1,6 @@
 package offer;
 
-import model.Node;
+import model.v2.Node;
 import util.NodeUtils;
 
 import java.util.HashMap;
