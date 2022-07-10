@@ -2,21 +2,21 @@ package model;
 
 public class Node {
     public int val;
-    public Node next;
-    public Node random;
+    public Node left;
+    public Node right;
 
     public Node(int val) {
         this.val = val;
-        this.next = null;
-        this.random = null;
+        this.left = null;
+        this.right = null;
     }
 
     @Override
     public String toString() {
         return "Node{" +
                 "val=" + val +
-                ", next=" + (next != null ? next.val : "NULL") +
-                ", random=" + (random != null ? random.val : "NULL") +
+                ", left=" + (left != null ? left.val : "NULL") +
+                ", right=" + (right != null ? right.val : "NULL") +
                 '}';
     }
 }
