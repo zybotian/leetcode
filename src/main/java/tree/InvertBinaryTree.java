@@ -2,7 +2,7 @@ package tree;
 
 import common.TreeNode;
 
-import util.TreeDisplay;
+import util.TreeUtils;
 
 /**
  * @author tianbo
@@ -24,10 +24,10 @@ public class InvertBinaryTree {
         node2.right = node3;
         node7.left = node6;
         node7.right = node9;
-        TreeDisplay.visitInOrder(node4);
+        TreeUtils.visitInOrder(node4);
 
         TreeNode treeNode = invertTree(node4);
-        TreeDisplay.visitInOrder(treeNode);
+        TreeUtils.visitInOrder(treeNode);
     }
 
     public static TreeNode invertTree(TreeNode root) {

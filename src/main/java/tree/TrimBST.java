@@ -2,7 +2,7 @@ package tree;
 
 import common.TreeNode;
 
-import util.TreeDisplay;
+import util.TreeUtils;
 
 /**
  * @author tianbo
@@ -31,19 +31,19 @@ public class TrimBST {
     public static void main(String[] args) {
         Solution solution = new Solution();
 
-        TreeDisplay.visitInOrder(solution.trimBST(createTree(), 1, 10));
+        TreeUtils.visitInOrder(solution.trimBST(createTree(), 1, 10));
         System.out.println();
 
-        TreeDisplay.visitInOrder(solution.trimBST(createTree(), 1, 7));
+        TreeUtils.visitInOrder(solution.trimBST(createTree(), 1, 7));
         System.out.println();
 
-        TreeDisplay.visitInOrder(solution.trimBST(createTree(), 1, 6));
+        TreeUtils.visitInOrder(solution.trimBST(createTree(), 1, 6));
         System.out.println();
 
-        TreeDisplay.visitInOrder(solution.trimBST(createTree(), 1, 5));
+        TreeUtils.visitInOrder(solution.trimBST(createTree(), 1, 5));
         System.out.println();
 
-        TreeDisplay.visitInOrder(solution.trimBST(createTree(), 4, 7));
+        TreeUtils.visitInOrder(solution.trimBST(createTree(), 4, 7));
         System.out.println();
 
     }

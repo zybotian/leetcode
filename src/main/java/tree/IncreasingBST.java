@@ -4,7 +4,7 @@ import common.TreeNode;
 
 import java.util.LinkedList;
 
-import util.TreeDisplay;
+import util.TreeUtils;
 
 /**
  * @author tianbo
@@ -24,7 +24,7 @@ public class IncreasingBST {
         node3.left = node2;
         node3.right = node4;
         node6.right = node7;
-        TreeDisplay.display(solution.increasingBST(node5));
+        TreeUtils.display(solution.increasingBST(node5));
     }
 
     // 100%, 遍历时直接修改指针, 只需要一次遍历, 效率进一步提高

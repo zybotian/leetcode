@@ -2,7 +2,7 @@ package tree;
 
 import common.TreeNode;
 
-import util.TreeDisplay;
+import util.TreeUtils;
 
 /**
  * @author tianbo
@@ -21,7 +21,7 @@ public class InsertIntoBST {
         node2.right = node5;
 
         Solution solution = new Solution();
-        TreeDisplay.visitInOrder(solution.insertIntoBST(node1, 25));
+        TreeUtils.visitInOrder(solution.insertIntoBST(node1, 25));
     }
 
     // 100%

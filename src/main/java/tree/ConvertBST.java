@@ -2,7 +2,7 @@ package tree;
 
 import common.TreeNode;
 
-import util.TreeDisplay;
+import util.TreeUtils;
 
 /**
  * @author tianbo
@@ -29,10 +29,10 @@ public class ConvertBST {
         node24.right = node32;
 
         Solution solution = new Solution();
-        TreeDisplay.visitInOrder(node5);
+        TreeUtils.visitInOrder(node5);
         System.out.println("_________________________");
 
-        TreeDisplay.visitInOrder(solution.convertBST(node5));
+        TreeUtils.visitInOrder(solution.convertBST(node5));
     }
 
     // 击败100%
