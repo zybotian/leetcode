@@ -23,15 +23,11 @@ public class MergeTwoLists {
             }
             curr = curr.next;
         }
-        while (list1 != null) {
+        if (list1 != null) {
             curr.next = list1;
-            list1 = list1.next;
-            curr = curr.next;
         }
-        while (list2 != null) {
+        if (list2 != null) {
             curr.next = list2;
-            list2 = list2.next;
-            curr = curr.next;
         }
 
         return dummy.next;

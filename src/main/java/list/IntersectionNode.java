@@ -3,6 +3,9 @@ package list;
 import common.ListNode;
 import util.ListNodeUtils;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class IntersectionNode {
 
     public static void main(String[] args) {
@@ -14,6 +17,26 @@ public class IntersectionNode {
 
         ListNode intersectionNode2 = intersectionNode.getIntersectionNode(listNode1, listNode2);
         System.out.println(intersectionNode2);
+    }
+
+    public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) {
+            return null;
+        }
+        ListNode p = headA;
+        Set<ListNode> nodeSet = new HashSet<>();
+        while (p != null) {
+            nodeSet.add(p);
+            p = p.next;
+        }
+        p = headB;
+        while (p != null) {
+            if (nodeSet.contains(p)) {
+                return p;
+            }
+            p = p.next;
+        }
+        return null;
     }
 
     public ListNode getIntersectionNote(ListNode headA, ListNode headB) {
