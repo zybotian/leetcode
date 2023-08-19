@@ -23,16 +23,16 @@ class MinStack {
             int lastMin = minStack.peek();
             if (x < lastMin) {
                 minStack.push(x);
-            } else {
-                minStack.push(lastMin);
             }
         }
     }
 
     public void pop() {
         if (!dataStack.isEmpty()) {
-            dataStack.pop();
-            minStack.pop();
+            Integer pop = dataStack.pop();
+            if (pop == minStack.peek()) {
+                minStack.pop();
+            }
         }
     }
 

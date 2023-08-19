@@ -3,22 +3,25 @@ package design;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class LRUCache {
-    LinkedHashMap<Integer, Integer> cache;
-    int capacity;
+/**
+ * @author tianbo
+ * @date 2019-04-08
+ */
+public class LRUCache1 {
+    private LinkedHashMap<Integer, Integer> cache;
 
-    public LRUCache(int capacity) {
-        this.cache = new LinkedHashMap<Integer, Integer>(capacity, 0.75F, true) {
+    public LRUCache1(final int capacity) {
+        cache = new LinkedHashMap(capacity, 0.75F, true) {
             @Override
             protected boolean removeEldestEntry(Map.Entry eldest) {
                 return size() > capacity;
             }
         };
-        this.capacity = capacity;
     }
 
     public int get(int key) {
-        return cache.getOrDefault(key, -1);
+        Integer integer = cache.get(key);
+        return integer == null ? -1 : integer;
     }
 
     public void put(int key, int value) {
