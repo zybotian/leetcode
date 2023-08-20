@@ -1,47 +1,45 @@
 package list;
 
-import common.Interval;
 import common.ListNode;
+import util.ListNodeUtils;
 
 public class ReverseList {
-    public ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-        ListNode list = reverseList(head.next);
-        ListNode tail = list;
-        while (tail.next != null) {
-            tail = tail.next;
-        }
-        tail.next = head;
-        head.next = null;
-        return list;
+
+    public static void main(String[] args) {
+        ListNode listNode1 = ListNodeUtils.create(new int[]{1, 2, 3, 4, 5});
+        ListNode listNode2 = ListNodeUtils.create(new int[]{1, 2});
+        ReverseList reverseList = new ReverseList();
+        ListNode listNode11 = reverseList.reverseList(listNode1);
+        ListNodeUtils.display(listNode11);
+
+        ListNode listNode22 = reverseList.reverseList(listNode2);
+        ListNodeUtils.display(listNode22);
     }
 
-    public ListNode reverseListV2(ListNode head) {
+    public ListNode reverseList2(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode pre = null, cur = head, next = null;
-        while (cur != null) {
-            next = cur.next;
-            cur.next = pre;
-            pre = cur;
-            cur = next;
+
+        ListNode pre = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
         }
         return pre;
     }
 
-    public ListNode reverseListV3(ListNode head) {
+    public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
-        return reverseListV3(null, head);
-    }
 
-    private ListNode reverseListV3(ListNode headReversed, ListNode headWaitingReverse) {
-        ListNode tmp = headWaitingReverse.next;
-        headWaitingReverse.next = headReversed;
-        return reverseListV3(headWaitingReverse, tmp);
+        ListNode newHead = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
     }
 }

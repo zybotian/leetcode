@@ -7,6 +7,13 @@ import java.util.PriorityQueue;
 
 public class MergeKLists {
 
+    public ListNode mergeKListsV3(ListNode[] lists) {
+        ListNode ans = null;
+        for (int i = 0; i < lists.length; i++) {
+            ans = mergeTwoLists(ans, lists[i]);
+        }
+        return ans;
+    }
 
     public ListNode mergeKListsV2(ListNode[] lists) {
         if (lists == null || lists.length == 0) {
@@ -16,27 +23,29 @@ public class MergeKLists {
             return lists[0];
         }
 
-        PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt(list -> list.val));
+        // 定义一个优先级队列
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt(listNode -> listNode.val));
 
+        // 遍历数组，将数组中每个链表的表头元素添加到队列中
         for (int i = 0; i < lists.length; i++) {
             if (lists[i] != null) {
                 queue.add(lists[i]);
             }
         }
 
-        ListNode result = new ListNode(0);
-        ListNode curr = result;
+        ListNode dummy = new ListNode(0);
+        ListNode curr = dummy;
 
         while (!queue.isEmpty()) {
-            ListNode min = queue.poll();
-            curr.next = min;
-            curr = min;
-            if (min.next != null) {
-                queue.add(min.next);
+            ListNode currentMin = queue.poll();
+            curr.next = currentMin;
+            curr = currentMin;
+            if (currentMin.next != null) {
+                queue.add(currentMin.next);
             }
         }
 
-        return result.next;
+        return dummy.next;
     }
 
 
@@ -67,10 +76,6 @@ public class MergeKLists {
             return list1 == null ? list2 : list1;
         }
 
-        if (list1 == list2) {
-            return list1;
-        }
-
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
 
@@ -84,16 +89,7 @@ public class MergeKLists {
             }
             curr = curr.next;
         }
-        while (list1 != null) {
-            curr.next = list1;
-            list1 = list1.next;
-            curr = curr.next;
-        }
-        while (list2 != null) {
-            curr.next = list2;
-            list2 = list2.next;
-            curr = curr.next;
-        }
+        curr.next = list1 == null ? list2 : list1;
 
         return dummy.next;
     }
