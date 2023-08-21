@@ -1,7 +1,5 @@
 package offer;
 
-import java.util.Locale;
-
 public class CountDigitOne {
 
     public static void main(String[] args) {

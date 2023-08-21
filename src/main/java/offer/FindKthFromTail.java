@@ -3,8 +3,6 @@ package offer;
 import common.ListNode;
 import util.ListNodeUtils;
 
-import javax.swing.plaf.ListUI;
-
 public class FindKthFromTail {
 
     // 1 -> 2 -> 3 -> 4 -> 5 -> 6

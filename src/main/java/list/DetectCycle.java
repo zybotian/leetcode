@@ -3,7 +3,6 @@ package list;
 import common.ListNode;
 import util.ListNodeUtils;
 
-import javax.swing.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,36 +16,45 @@ public class DetectCycle {
         ListNode listNode2 = ListNodeUtils.create(new int[]{1, 2});
         listNode2.next.next = listNode2;
         System.out.println(new DetectCycle().detectCycle(listNode2));
+
+        ListNode listNode3 = ListNodeUtils.create(new int[]{1});
+        System.out.println(new DetectCycle().detectCycle(listNode3));
     }
 
     public ListNode detectCycle(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                ListNode p = head, q = slow;
+                while (p != q) {
+                    p = p.next;
+                    q = q.next;
+                }
+                return p;
+            }
+        }
+        return null;
+    }
+
+    public ListNode detectCycle2(ListNode head) {
         if (head == null || head.next == null) {
             return null;
         }
 
-        ListNode fast = head.next, slow = head;
-        while (fast != null && slow != null && fast != slow) {
-            slow = slow.next;
-            fast = fast.next;
-            if (fast != null) {
-                fast = fast.next;
-            }
-        }
-        if (fast == null || slow == null) {
-            return null;
-        }
         Set<ListNode> set = new HashSet<>();
-        set.add(fast);
-        ListNode curr = fast.next;
-        while (curr != slow) {
+        ListNode curr = head;
+        while (curr != null) {
+            if (set.contains(curr)) {
+                return curr;
+            }
             set.add(curr);
             curr = curr.next;
         }
-
-        curr = head;
-        while (!set.contains(curr)) {
-            curr = curr.next;
-        }
-        return curr;
+        return null;
     }
 }

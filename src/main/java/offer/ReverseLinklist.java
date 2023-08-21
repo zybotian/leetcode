@@ -1,7 +1,6 @@
 package offer;
 
 import common.ListNode;
-
 import util.ListNodeUtils;
 
 /**

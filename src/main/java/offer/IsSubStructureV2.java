@@ -2,9 +2,6 @@ package offer;
 
 import common.TreeNode;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class IsSubStructureV2 {
 
     public boolean isSubStructure(TreeNode A, TreeNode B) {

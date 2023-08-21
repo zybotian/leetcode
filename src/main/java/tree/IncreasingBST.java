@@ -1,10 +1,9 @@
 package tree;
 
 import common.TreeNode;
+import util.TreeUtils;
 
 import java.util.LinkedList;
-
-import util.TreeUtils;
 
 /**
  * @author tianbo

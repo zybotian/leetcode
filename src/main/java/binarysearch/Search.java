@@ -1,8 +1,8 @@
 package binarysearch;
 
-import java.util.Arrays;
-
 import util.SequenceUtils;
+
+import java.util.Arrays;
 
 /**
  * @author tianbo
