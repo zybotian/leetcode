@@ -4,36 +4,26 @@ import java.util.Stack;
 
 class MinStack {
 
-    private Stack<Integer> dataStack;
-    private Stack<Integer> minStack;
+    Stack<Integer> dataStack;
+    Stack<Integer> minStack;
 
-    /**
-     * initialize your data structure here.
-     */
     public MinStack() {
         dataStack = new Stack<>();
         minStack = new Stack<>();
     }
 
-    public void push(int x) {
-        dataStack.push(x);
+    public void push(int val) {
+        dataStack.push(val);
         if (minStack.isEmpty()) {
-            minStack.push(x);
+            minStack.push(val);
         } else {
-            int lastMin = minStack.peek();
-            if (x < lastMin) {
-                minStack.push(x);
-            }
+            minStack.push(Math.min(val, minStack.peek()));
         }
     }
 
     public void pop() {
-        if (!dataStack.isEmpty()) {
-            Integer pop = dataStack.pop();
-            if (pop == minStack.peek()) {
-                minStack.pop();
-            }
-        }
+        dataStack.pop();
+        minStack.pop();
     }
 
     public int top() {
@@ -43,7 +33,7 @@ class MinStack {
         return dataStack.peek();
     }
 
-    public int min() {
+    public int getMin() {
         if (minStack.isEmpty()) {
             return -1;
         }
