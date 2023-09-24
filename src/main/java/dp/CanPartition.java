@@ -13,6 +13,29 @@ public class CanPartition {
     }
 
     public boolean canPartition(int[] nums) {
-        return false;
+        int len = nums.length;
+        int sum = 0;
+        for (int i = 0; i < len; i++) {
+            sum += nums[i];
+        }
+
+        if (sum % 2 == 1) {
+            return false;
+        }
+
+        int target = sum / 2;
+
+        boolean[][] result = new boolean[len][target + 1];
+        if (nums[0] <= target) {
+            result[0][nums[0]] = true;
+        }
+
+        for (int i = 1; i < len; i++) {
+            for (int j = 0; j <= target; j++) {
+                result[i][j] = result[i - 1][j] || nums[i] == j || nums[i] < j && result[i - 1][j - nums[i]];
+            }
+        }
+
+        return result[len - 1][target];
     }
 }
