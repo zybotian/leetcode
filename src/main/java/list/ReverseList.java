@@ -20,9 +20,19 @@ public class ReverseList {
         if (head == null || head.next == null) {
             return head;
         }
-
-        ListNode pre = null;
-        ListNode curr = head;
+        // pre      curr   next
+        //          1 ->   2    -> 3  -> 4 -> 5
+        // NULL <-  1
+        //          pre    curr    next
+        // NULL <-  1  <-  2
+        //                 pre     curr
+        // NULL <-  1  <-  2   <-  3
+        //                         pre   curr
+        // NULL <-  1 <-   2   <-  3  <-  4
+        //                               pre   curr
+        // NULL <-  1 <-   2   <-  3  <-  4  <-  5
+        //                                       pre  curr
+        ListNode pre = null, curr = head;
         while (curr != null) {
             ListNode next = curr.next;
             curr.next = pre;
@@ -37,6 +47,8 @@ public class ReverseList {
             return head;
         }
 
+        // 1->2->3->4->5
+        // 1->2<-3<-4<-5
         ListNode newHead = reverseList(head.next);
         head.next.next = head;
         head.next = null;
