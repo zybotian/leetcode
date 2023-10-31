@@ -16,21 +16,24 @@ public class SortList {
         if (head == null || head.next == null) {
             return head;
         }
+        ListNode middle = getMiddleNode(head);
+        ListNode next = middle.next;
+        middle.next = null;
+        ListNode firstPart = sortList(head);
+        ListNode secondPart = sortList(next);
 
-        ListNode slow = head, fast = head.next;
+        return mergeTwoSortedList(firstPart, secondPart);
+    }
+
+    // 1->2->3->4->5
+    // 1,2 2,3 3,5
+    private ListNode getMiddleNode(ListNode head) {
+        ListNode fast = head.next, slow = head;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
-
-        ListNode list1 = head;
-        ListNode list2 = slow.next;
-        // 断开链表
-        slow.next = null;
-
-        ListNode sortedList1 = sortList(list1);
-        ListNode sortedList2 = sortList(list2);
-        return mergeTwoSortedList(sortedList1, sortedList2);
+        return slow;
     }
 
     private ListNode mergeTwoSortedList(ListNode list1, ListNode list2) {
@@ -51,17 +54,29 @@ public class SortList {
             }
             curr = curr.next;
         }
-        while (list1 != null) {
-            curr.next = list1;
-            list1 = list1.next;
-            curr = curr.next;
-        }
-        while (list2 != null) {
-            curr.next = list2;
-            list2 = list2.next;
-            curr = curr.next;
-        }
+        curr.next = list1 != null ? list1 : list2;
 
         return dummy.next;
+    }
+
+    public ListNode sortList2(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode slow = head, fast = head.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        ListNode list1 = head;
+        ListNode list2 = slow.next;
+        // 断开链表
+        slow.next = null;
+
+        ListNode sortedList1 = sortList(list1);
+        ListNode sortedList2 = sortList(list2);
+        return mergeTwoSortedList(sortedList1, sortedList2);
     }
 }
