@@ -1,6 +1,5 @@
 package twopointers;
 
-import java.util.Arrays;
 
 class Trap {
 
@@ -11,6 +10,9 @@ class Trap {
 
         int[] height2 = {4, 2, 0, 3, 2, 5};
         System.out.println(trap.trap(height2));
+
+        int[] height3 = {4, 2, 3};
+        System.out.println(trap.trap(height3));
     }
 
     /**
@@ -21,16 +23,20 @@ class Trap {
         if (height == null || height.length == 0) {
             return 0;
         }
+
+        int maxHeight = 0;
+        for (int i = 0; i < height.length; i++) {
+            maxHeight = Math.max(maxHeight, height[i]);
+        }
+
         int sum = 0;
         int currentRow = 0;
-        while (true) {
-            int currentSum = trapOneLine(height, currentRow);
-            if (currentSum == 0) {
-                break;
-            }
-            sum += currentSum;
+
+        while (currentRow < maxHeight) {
+            sum += trapOneLine(height, currentRow);
             currentRow++;
         }
+
         return sum;
     }
 
@@ -58,6 +64,7 @@ class Trap {
             left = right;
             right++;
         }
+//        System.out.println(Arrays.toString(newHeight) + "==" + currentRow + "==" + result);
         return result;
     }
 }
