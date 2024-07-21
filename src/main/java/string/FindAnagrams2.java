@@ -26,6 +26,36 @@ public class FindAnagrams2 {
         }
 
         List<Integer> resultList = new ArrayList<>();
+
+        int[] pCount = new int[26];
+        int[] sCount = new int[26];
+        for (int i = 0; i < lenPtr; i++) {
+            pCount[p.charAt(i) - 'a']++;
+            sCount[s.charAt(i) - 'a']++;
+        }
+        if (Arrays.equals(pCount, sCount)) {
+            resultList.add(0);
+        }
+
+        for (int i = 1; i <= lenStr - lenPtr; i++) {
+            sCount[s.charAt(i - 1) - 'a']--;
+            sCount[s.charAt(i + lenPtr - 1) - 'a']++;
+            if (Arrays.equals(pCount, sCount)) {
+                resultList.add(i);
+            }
+        }
+        return resultList;
+    }
+
+    public List<Integer> findAnagrams2(String s, String p) {
+        int lenStr = s.length();
+        int lenPtr = p.length();
+
+        if (lenPtr > lenStr) {
+            return new ArrayList<>();
+        }
+
+        List<Integer> resultList = new ArrayList<>();
         String encodeP = encodeString(p, 0, lenPtr - 1);
         for (int start = 0, tail = lenStr - lenPtr; start <= tail; start++) {
             int end = start + lenPtr - 1;
