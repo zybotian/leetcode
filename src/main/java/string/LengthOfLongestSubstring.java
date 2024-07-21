@@ -11,6 +11,8 @@ public class LengthOfLongestSubstring {
         System.out.println(lengthOfLongestSubstring.lengthOfLongestSubstring("abcabcbb"));
         System.out.println(lengthOfLongestSubstring.lengthOfLongestSubstring("bbbbb"));
         System.out.println(lengthOfLongestSubstring.lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring.lengthOfLongestSubstring("qwertyuiop"));
+        System.out.println(lengthOfLongestSubstring.lengthOfLongestSubstring("asdfasdf"));
     }
 
     // 2,0,2,1,1,0
@@ -31,6 +33,7 @@ public class LengthOfLongestSubstring {
                 max = Math.max(max, i - left + 1);
             } else {
                 window.put(s.charAt(i), i);
+                max = Math.max(max, i - left + 1);
             }
             // abba
         }
