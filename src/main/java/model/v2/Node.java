@@ -18,6 +18,8 @@ public class Node {
     public String toString() {
         return "Node{" +
                 "val=" + val +
+                "next=" + next.val +
+                "randow=" + (random != null ? random.val : -9) +
                 '}';
     }
 }
