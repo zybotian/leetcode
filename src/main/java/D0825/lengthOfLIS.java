@@ -1,15 +1,17 @@
 package D0825;
 
+import java.util.Arrays;
+
 class lengthOfLIS {
 
     public static void main(String[] args) {
-        int[] data1 = {7, 7, 7, 7, 7,};
-        int[] data2 = {10, 9, 2, 5, 3, 7, 101, 18};
-        int[] data3 = {0, 1, 0, 3, 2, 3};
-        int[] data4 = {0, 1, 2, 3, 4, 5};
-        int[] data5 = {5, 4, 3, 2, 1};
-        int[] data6 = {5, 4, 6, 3, 7, 2, 8, 1};
-        int[] data7 = {4, 10, 4, 3, 8, 9};
+        int[] data1 = {7, 7, 7, 7, 7, 7};//1
+        int[] data2 = {10, 9, 2, 5, 3, 7, 101, 18};//4
+        int[] data3 = {0, 1, 0, 3, 2, 3};//4
+        int[] data4 = {0, 1, 2, 3, 4, 5};//6
+        int[] data5 = {5, 4, 3, 2, 1};//1
+        int[] data6 = {5, 4, 6, 3, 7, 2, 8, 1};// 4
+        int[] data7 = {4, 10, 4, 3, 8, 9};// 3
         // [4]
         // [4,10]
         // [4,10]
@@ -30,21 +32,16 @@ class lengthOfLIS {
 
     public int lengthOfLIS(int[] nums) {
         int[] result = new int[nums.length];
-        result[0] = 1;
+        Arrays.fill(result, 1);
 
-        int max = result[0];
 
+        int max = 1;
         for (int i = 1; i < nums.length; i++) {
             for (int j = 0; j < i; j++) {
-                if (nums[j] < nums[i]) {
-                    result[j] = result[i] + 1;
-                } else {
-
+                if (nums[i] > nums[j]) {
+                    result[i] = Math.max(result[i], result[j] + 1);
                 }
             }
-        }
-
-        for (int i = 1; i < result.length; i++) {
             max = Math.max(max, result[i]);
         }
 
