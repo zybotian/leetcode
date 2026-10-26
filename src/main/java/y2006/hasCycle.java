@@ -9,16 +9,16 @@ import java.util.Set;
 public class hasCycle {
     public static void main(String[] args) {
         ListNode listNode = ListNodeUtils.create(new int[]{1, 2, 3, 4, 5});
-//        listNode.next.next.next.next = listNode.next;
+        listNode.next.next.next.next = listNode.next;
         hasCycle hasCycle = new hasCycle();
         System.out.println(hasCycle.hasCycle(listNode));
     }
 
     public boolean hasCycle(ListNode head) {
         ListNode fast = head, slow = head;
-        while (slow != null && slow.next != null) {
-            fast = fast.next;
-            slow = slow.next.next;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
             if (fast == slow) {
                 return true;
             }
