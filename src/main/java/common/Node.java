@@ -15,6 +15,12 @@ public class Node {
     public Node() {
     }
 
+    public Node(int val) {
+        this.val = val;
+        this.next = null;
+        this.random = null;
+    }
+
     public Node(int _val, Node _prev, Node _next, Node _child) {
         val = _val;
         prev = _prev;

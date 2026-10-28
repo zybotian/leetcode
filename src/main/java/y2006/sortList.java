@@ -6,7 +6,8 @@ import util.ListNodeUtils;
 public class sortList {
     public static void main(String[] args) {
         sortList sortList = new sortList();
-        ListNode listNode = ListNodeUtils.create(new int[]{1, 4, 3, 7, 8, 5});
+        ListNode listNode = ListNodeUtils.create(new int[]{9, 1, 4, 3, 7, 2, 8, 10, 5, 6});
+//        ListNodeUtils.display(listNode);
         ListNode listNode1 = sortList.sortList(listNode);
         ListNodeUtils.display(listNode1);
     }
@@ -15,19 +16,24 @@ public class sortList {
         if (head == null || head.next == null) {
             return head;
         }
+        // 获取中间节点
         ListNode middle = getMiddle(head);
         ListNode middleNext = middle.next;
+        // 中间节点断开
         middle.next = null;
+        // 左半部分排序
         ListNode listNode1 = sortList(head);
+        // 右半部分排序
         ListNode listNode2 = sortList(middleNext);
         return mergeTwoLists(listNode1, listNode2);
     }
 
     private ListNode getMiddle(ListNode head) {
-        ListNode fast = head, slow = head;
-        while (fast != null && fast.next != null ) {
-            fast = fast.next.next;
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null && fast.next.next != null) {
             slow = slow.next;
+            fast = fast.next.next;
         }
         return slow;
     }
@@ -50,16 +56,12 @@ public class sortList {
             }
         }
 
-        while (p != null) {
+        if (p != null) {
             curr.next = p;
-            curr = p;
-            p = p.next;
         }
 
-        while (q != null) {
+        if (q != null) {
             curr.next = q;
-            curr = q;
-            q = q.next;
         }
         return dummy.next;
     }
